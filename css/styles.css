@@ -1,0 +1,14 @@
+.current {
+  color: green;
+}
+
+.emph{
+  color: red;
+}
+
+.special_snowflake{
+  height: 500px;
+  width: 800px;
+  color: white;
+  background-color: blue;
+}
