@@ -1,14 +1,79 @@
-.current {
-  color: green;
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.emph{
-  color: red;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Montserrat';
+  font-size: 20px;
 }
 
-.special_snowflake{
-  height: 500px;
-  width: 800px;
+a{
+  text-decoration: none;
   color: white;
-  background-color: blue;
+}
+
+p{
+  margin: 0;
+}
+
+#left{
+  background-image: url("../img/board.jpg");
+  color: white;
+  height: 100%;
+  float: left;
+  text-align: right;
+}
+
+#right{
+  height: 100%;
+  color: black;
+  float: left;
+}
+
+.maintext{
+  width: 60%;
+  margin: 43% 0 0 0;
+}
+
+
+
+/* Nametag */
+#nametag{
+  margin: 35% 0 0 0;
+}
+#nametag .name{
+  font-size: 60px;
+  font-weight: bold;
+}
+#nametag .subname{
+  font-size: 24px;
+}
+#nametag .links{
+  margin-top: 20px;
+}
+#nametag .links img{
+  margin-left: 10px;
+}
+
+
+/* Navigation */
+nav{
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+nav p{
+  margin-bottom: 10px;
+}
+
+.current {
+  font-weight: bold;
 }
