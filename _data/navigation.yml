@@ -1,6 +1,9 @@
 - name: Home
   link: /
+  state: large
 - name: Research
   link: /research.html
+  state: small
 - name: Talks & Posters
   link: /talks.html
+  state: small
