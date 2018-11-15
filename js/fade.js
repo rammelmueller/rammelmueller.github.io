@@ -1,52 +1,106 @@
-function shrink_sidebar(src, dest) {
-  var sidebar = document.getElementById("left");
-  var main = document.getElementById("right");
+// General wrapper, that deals with changing the content.
+function switch_content(dest){
 
-  var width = 48;
-  var goal = 28;
-  var step = 0.5;
-  var half = width - (width - goal)/2;
-  var steps = (width - goal) / step;
-  var ostep = 2/steps
-  var op = 1;
-
-
-  // First half.
-  var freq = setInterval(frame_first, 5);
-  function frame_first() {
-    if (width <= half) {
-      clearInterval(freq);
-    } else {
-      width = width - step;
-      sidebar.style.width = width + '%';
-      op = op - ostep;
-      main.style.opacity = op;
-      console.log(main.style.opacity)
+  console.log(status, '-->', dest)
+  // First check: do we have to switch at all?
+  if (status==dest || (!status && dest=='/')) {
+    console.log('samesies')
+  }
+  else {
+    // If we are at the main page: shrink the sidebar.
+    if (status=='/' || !status) {
+      shrink_sidebar(dest)
     }
-  };
-
-  // Second half.
-  // var freq = setInterval(frame_second, 5);
-  // function frame_second() {
-  //   if (width <= goal) {
-  //     clearInterval(freq);
-  //   } else {
-  //     width = width - step;
-  //     sidebar.style.width = width + '%';
-  //   }
-  // };
-}
-
-function grow_sidebar() {
-  var sidebar = document.getElementById("left");
-  var width = 28;
-  var freq = setInterval(frame, 10);
-  function frame() {
-    if (width == 48) {
-      clearInterval(freq);
-    } else {
-      width++;
-      sidebar.style.width = width + '%';
+    else if (dest == '/') {
+      console.log('gro2?')
+      grow_sidebar();
+    }
+    else {
+      var content = document.getElementById("content");
+      content.src = dest;
     }
   }
+  status = dest;
+}
+
+// From home to subpages.
+function shrink_sidebar(dest) {
+  var sidebar = document.getElementById("left");
+  var main = document.getElementById("right");
+  var content = document.getElementById("content");
+
+  var width = 48;
+  var mwidth = 48;
+  var goal = 28;
+  var step = 0.5;
+  var steps = (width - goal) / step;
+  var ostep = 2/steps;
+  var op = 1;
+  var i = 0;
+
+  var freq = setInterval(frame, 5);
+  function frame() {
+    i += 1;
+    if (i >= steps){
+      clearInterval(freq);
+    }
+    else {
+      width = width - step;
+      mwidth = mwidth + step;
+      if (i < steps/2) {
+        op -= ostep;
+      }
+      else if (i == steps/2) {
+        content.src = dest;
+        op += ostep;
+      }
+      else {
+        op += ostep;
+      };
+      content.style.opacity = op;
+      sidebar.style.width = width + '%';
+      main.style.width = mwidth + '%';
+    }
+  };
+}
+
+// From subpages to home.
+function grow_sidebar() {
+  var sidebar = document.getElementById("left");
+  var main = document.getElementById("right");
+  var content = document.getElementById("content");
+
+  var width = 28;
+  var mwidth = 68;
+  var goal = 48;
+  var step = 0.5;
+  var steps = (goal - width) / step;
+  var ostep = 2/steps;
+  var op = 1;
+  var i = 0;
+
+  var freq = setInterval(frame, 5);
+  function frame() {
+    i += 1;
+    if (i >= steps){
+      clearInterval(freq);
+    }
+    else {
+      width = width + step;
+      mwidth = mwidth - step;
+      if (i < steps/2) {
+        op -= ostep;
+      }
+      else if (i == steps/2) {
+        content.src = '/';
+        op += ostep;
+      }
+      else {
+        op += ostep;
+      };
+      content.style.opacity = op;
+      sidebar.style.width = width + '%';
+      main.style.width = mwidth + '%';
+    }
+  };
 }

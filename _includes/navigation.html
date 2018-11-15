@@ -1,12 +1,7 @@
 <nav>
   {% for item in site.data.navigation %}
-    <p>
-      <a href="#"
-      {% if page.url == item.link %}
-        class= ''
-      {% else %}
-        onClick="shrink_sidebar('{{ page.url }}', '{{ item.link }}')"
-      {% endif %}>{{ item.name }}</a>
+    <p id="link_{{ item.link }}">
+      <a href="#" onClick="switch_content('{{ item.link }}')">{{ item.name }}</a>
     </p>
   {% endfor %}
 </nav>

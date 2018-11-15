@@ -8,8 +8,8 @@
   padding: 0 0 0 2%;
 }
 
-
-.maintext{
-  width: 60%;
-  margin: 43% 0 0 0;
+#content{
+  width: 100%;
+  margin: 5% 0 0 0;
+  border: none;
 }
