@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <img src="{{site.baseurl}}img/avatar.png">
+      <img src="/img/avatar.png">
       <h1>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
@@ -10,7 +10,7 @@
       <p class="lead">{{ site.description }}</p>
       <p class='sidebar-social'>
         {% for item in site.data.social %}
-          <a class="" target='blank' href="{{item.link}}"><img width="{{ item.width }}" src="{{site.baseurl}}{{ item.img }}" alt=""></a>
+          <a class="" target='blank' href="{{item.link}}"><img width="{{ item.width }}" src="/{{ item.img }}" alt=""></a>
         {% endfor %}
       </p>
     </div>
