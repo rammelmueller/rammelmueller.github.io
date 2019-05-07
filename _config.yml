@@ -6,6 +6,8 @@ title:                'Lukas Rammelmüller'
 description:          'PhD candidate @ TU Darmstadt'
 baseurl:              /
 
+paginate:         5
+
 author:
   name:               'Lukas Rammelmüller'
   url:

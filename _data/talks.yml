@@ -1,0 +1,125 @@
+- title: Stochastic quantization and spin-polarized Fermi gases
+  date: March 26, 2019
+  venue: Perimeter Institute for Theoretical Physics, Waterloo, Canada
+  type: seminar
+  x: 43.465569
+  y: -80.527585
+  file:
+
+- title: Stochastic quantization and spin-polarized Fermi gases
+  venue: Faculty for Nanophysics, Ludwig-Maximillians Universität Munich, Germany
+  date: March 11, 2019
+  type: seminar
+  x: 48.148492
+  y:  11.573193
+  file:
+
+- title: Thermodynamics of the spin-polarized unitary Fermi gas
+  venue: Michigan State University, USA
+  event:
+  link:
+  date: October 5, 2018
+  type: seminar
+  x: 42.725191
+  y: -84.474591
+  file:
+
+- title: Thermodynamics of the spin-polarized unitary Fermi gas
+  venue: North Carolina State University, USA
+  event:
+  link:
+  date: September 27, 2018
+  type: seminar
+  x: 35.785655
+  y: -78.681880
+  file:
+
+- title: Imbalanced Fermi gases & the complex Langevin approach
+  venue: Physikzentrum Bad Honnef, Germany
+  event: Quantum Gases and Quantum Coherence 2018, 669. Wilhelm und Else Heraeus-Seminar
+  link:
+  date: April 15 - 18, 2018
+  type: poster
+  x: 50.651708
+  y: 7.219463
+  file: /stuff/talks/2018_04_badhonnef.pdf
+
+- title: The complex Langevin method for ultracold fermions
+  venue: Philipps Universität Marburg, Germany
+  event: FOR 1807 Winter School 2018
+  link:
+  date: February 20, 2018
+  type: contributed
+  x: 50.811578
+  y: 8.769597
+  file:
+
+- title: Ultracold fermions away from balanced systems
+  venue: Physikalisches Institut Heidelberg, Germany
+  event:
+  link:
+  date: February 6, 2018
+  type: seminar
+  x: 49.417102
+  y: 8.672791
+  file:
+
+- title: Ultracold fermions away from balanced systems
+  venue: Darmstädter Haus, Hirschegg, Austria
+  event: Multiparticle resonances in hadrons, nuclei, and ultracold gases
+  link:
+  date: January 17, 2018
+  type: contributed
+  x: 47.352663
+  y: 10.172453
+  file: /stuff/talks/2018_01_hirschegg.pdf
+
+- title: Ground state of the 2d attractive Fermi gas - from few to many body
+  venue: ICTP Trieste, Italy
+  event: Conference on Frontiers in Two-Dimensional Quantum Systems
+  link:
+  date: November 13 - 17, 2017
+  type: poster
+  x: 45.704765
+  y: 13.718629
+  file: /stuff/talks/2017_11_trieste.pdf
+
+- title: A complex Langevin approach to ultracold fermions
+  venue: Uni Innsbruck, Austria
+  event: Introductory Course on Ultracold Quantum Gases
+  link:
+  date: July 10 -13, 2017
+  type: poster
+  x: 47.264362
+  y: 11.343338
+  file: /stuff/talks/2017_06_pohang.pdf
+
+- title: A complex Langevin approach to ultracold fermions
+  venue: POSTECH, Pohang, South Korea.
+  event: 19th Internatcional conference on recent progress in many-body physics
+  link:
+  date: June 26 - 30, 2017
+  type: poster
+  x: 36.013939
+  y: 129.321054
+  file: /stuff/talks/2017_06_pohang.pdf
+
+- title: Equation of state & pair-correlations in one-dimensional mass-imbalanced Fermi systems
+  venue: Schleching, Germany
+  event: 48. Arbeitstreffen Kernphysik
+  link:
+  date: March 7, 2017
+  type: contributed
+  x: 47.719779
+  y: 12.394212
+  file: /stuff/talks/2017_03_schleching.pdf
+
+- title: Equation of state & pair-correlations in one-dimensional Fermi systems
+  venue: Physikzentrum Bad Honnef
+  event: Understanding the LHC, 637. Wilhelm und Else Heraeus-Seminar
+  link:
+  date: February 13, 2017
+  type: contributed
+  x: 50.651708
+  y: 7.219463
+  file: /stuff/talks/2017_02_badhonnef.pdf

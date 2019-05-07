@@ -10,3 +10,72 @@
 .sidebar-social {
   display: inline !important;
 }
+
+.sidebar-avatar{
+  filter: grayscale(100%);
+}
+
+.mainpage{
+  padding-top: 5rem;
+}
+
+.page a{
+}
+
+
+/*
+ * POSTS.
+ *
+ */
+.posts{
+  margin-top: 3rem;
+  font-size: 0.8rem;
+}
+
+
+.posts .title{
+  font-weight: bold;
+}
+.posts .timetag{
+  font-color: #c7c7c7;
+  font-weight: bold;
+ }
+
+
+/* MAP & TALKS*/
+#talk_map{
+  height: 512px;
+}
+
+.talk_table{
+  font-size: 0.7rem;
+}
+.talk_table img{
+  width: 4rem;
+  margin: 0;
+}
+.wide{
+  max-width: 65rem !important;
+}
+
+ .info_legend{
+   border-radius: 0.5rem;
+   background-color: rgba(100, 100, 100, 0.7);
+   padding: 0.6rem;
+   font-size: 0.7rem;
+   font-weight: bold;
+   color: rgba(255, 255, 255, 0.7);
+ }
+  .info_legend div{
+    margin: 0;
+    vertical-align: middle;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    white-space: nowrap;
+  }
+
+ .info_legend img{
+   display: inline;
+   width: 1.25rem;
+   margin: 0rem 0.2rem 0 0;
+ }

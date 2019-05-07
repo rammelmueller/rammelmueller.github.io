@@ -57,7 +57,9 @@ html {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #202020;
+  /* background-color: #202020; */
+  background-color:   #ac4142;
+
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -90,8 +92,8 @@ html {
 }
 .sidebar-nav-item {
   display: block;
-  line-height: 1.75;
   font-family: "Roboto Mono";
+  line-height: 1.75;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
