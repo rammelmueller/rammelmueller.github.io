@@ -97,7 +97,7 @@
         {% for node in site.data.talks %}
           <tr>
             <td><img src="/img/location_{{node.type}}.svg" alt=""></td>
-            <td><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.file }}">{{ node.title }}</a></td>
+            <td><a target='blank' class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.file }}">{{ node.title }}</a></td>
             <td>{% if node.event %} {{node.event}} @ {% endif %}{{ node.venue }}</td>
             <td>{{ node.date }}</td>
           </tr>

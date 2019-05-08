@@ -4,7 +4,7 @@
   type: seminar
   x: 43.465569
   y: -80.527585
-  file:
+  file: https://rammelmueller.github.io/slides
 
 - title: Stochastic quantization and spin-polarized Fermi gases
   venue: Faculty for Nanophysics, Ludwig-Maximillians Universität Munich, Germany
@@ -52,7 +52,7 @@
   type: contributed
   x: 50.811578
   y: 8.769597
-  file:
+  file: /stuff/talks/2018_02_marburg.pdf
 
 - title: Ultracold fermions away from balanced systems
   venue: Physikalisches Institut Heidelberg, Germany
@@ -62,7 +62,7 @@
   type: seminar
   x: 49.417102
   y: 8.672791
-  file:
+  file: /stuff/talks/2018_02_heidelberg.pdf
 
 - title: Ultracold fermions away from balanced systems
   venue: Darmstädter Haus, Hirschegg, Austria

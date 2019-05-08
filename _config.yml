@@ -6,12 +6,6 @@ title:                'Lukas Rammelmüller'
 description:          'PhD candidate @ TU Darmstadt'
 baseurl:              /
 
-paginate:         5
-
 author:
   name:               'Lukas Rammelmüller'
   url:
-
-# Custom vars.
-updated:              'May 2019'
-footer:               'Build with Jekyll and <span class="love">❤</span> <br>Based on the hyde and poole themes.'

@@ -9,6 +9,17 @@
       </h1>
       <p class="lead">{{ site.description }}</p>
       <p class='sidebar-social'>
+        <a id='ttt' class='tooltip'><img src="/img/mail.svg" width="30px"><span class='tooltiptext'>Mail only works if scripts are allowed - sorry!</span></a>
+
+        <script type="text/javascript">
+          document.getElementById('ttt').remove();
+          var a = 'lrammelmueller';
+          var b = 'theorie.ikp.physik';
+          document.write(
+            '<a href="mailto:'+a+'@'+b+'.tu-darmstadt.de"><img src="/img/mail.svg" width="30px"></a>'
+          );
+        </script>
+
         {% for item in site.data.social %}
           <a class="" target='blank' href="{{item.link}}"><img width="{{ item.width }}" src="/{{ item.img }}" alt=""></a>
         {% endfor %}
@@ -23,8 +34,11 @@
     </nav>
 
     <div class='sidebar-disclaimer'>
-      <p>Last updated: {{ site.updated }}</p>
-      <p>Build with Jekyll and <span style='color: red'>❤</span> <br>Based on poole and hyde themes.</p>
+      <p>Last updated: {{ site.time | date: '%B %Y' }}</p>
+      <p>
+        Build with  <a target='blank' href="https://jekyllrb.com/">jekyll</a> and <span style='color: red'>❤</span> <br>
+        Based on <a target='blank' href="http://getpoole.com/">poole</a> and the <a target='blank' href="http://hyde.getpoole.com/">hyde</a> theme.
+      </p>
     </div>
   </div>
 </div>

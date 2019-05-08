@@ -1,16 +1,16 @@
 - name: twitter
   link: https://twitter.com/rammelmuller
-  width: 26px
+  width: 31px
   img:  img/twitter_tight.png
 - name: github
   link: https://github.com/rammelmueller
-  width: 26px
+  width: 31px
   img: img/github.png
 - name: scholar
   link: https://scholar.google.com/citations?user=0vJK3-cAAAAJ&hl=en
-  width: 25px
+  width: 30px
   img: img/scholar.png
 - name: orcid
   link: https://orcid.org/0000-0002-4945-7955
-  width: 25px
+  width: 30px
   img: img/orcid.png
