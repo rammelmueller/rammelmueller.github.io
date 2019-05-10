@@ -1,110 +1,96 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  {% include head.html %}
-  <body>
-    {% include sidebar.html %}
+---
+layout: default
+---
+<h1 class="page-title">Talks & Posters</h1>
 
-    <div class="content wide container">
+{{ page.content }}
+<div id="talk_map"></div>
 
-      <!-- Add the content -->
-      <div class="page wide">
-        <h1 class="page-title">{{ page.title }}</h1>
-        {{ page.content }}
-      </div>
+<!-- Init & configure the map -->
+<script type="text/javascript">
 
-      <!-- Init & configure the map -->
-      <script type="text/javascript">
-        // Init view is on the theory center in Darmstadt.
-        var mymap = L.map('talk_map').setView([49.878292, 8.656101], 2);
+  // Init view is on the theory center in Darmstadt.
+  var mymap = L.map('talk_map').setView([49.878292, 8.656101], 2);
 
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 8,
-            minZoom: 2,
-            id: 'mapbox.light',
-            accessToken: 'pk.eyJ1IjoicmFtbWVsbXVlbGxlciIsImEiOiJjanZjd2djMWMwazgyNDNydmFzaDhtNmEzIn0.hgrDnlwFQjI3SLm7AXQJWw'
-        }).addTo(mymap);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 8,
+      minZoom: 2,
+      id: 'mapbox.light',
+      accessToken: 'pk.eyJ1IjoicmFtbWVsbXVlbGxlciIsImEiOiJjanZjd2djMWMwazgyNDNydmFzaDhtNmEzIn0.hgrDnlwFQjI3SLm7AXQJWw'
+  }).addTo(mymap);
 
-        // Produce different markers.
-        var LeafIcon = L.Icon.extend({
-            options: {
-                iconSize:     [38, 95],
-                iconAnchor:   [19, 70]
-            }
-        });
+  // Produce different markers.
+  var LeafIcon = L.Icon.extend({
+      options: {
+          iconSize:     [38, 95],
+          iconAnchor:   [19, 70]
+      }
+  });
 
-        L.icon = function (options) {return new L.Icon(options);};
-      </script>
+  L.icon = function (options) {return new L.Icon(options);};
 
-      <!-- Initialize the list -->
-      <script type="text/javascript">
+  // initialize the dict.
+  var settings = {
+    "contributed" : {
+      "icon": new LeafIcon({iconUrl: '/img/location_contributed.svg'}),
+      "count" : 0,
+      "prefix" : "Conference talk"
+    },
+    "seminar" : {
+      "icon": new LeafIcon({iconUrl: '/img/location_seminar.svg'}),
+      "count" : 0,
+      "prefix" : "Seminar talk"
+    },
+    "poster" : {
+      "icon": new LeafIcon({iconUrl: '/img/location_poster.svg'}),
+      "count" : 0,
+      "prefix" : "Poster presentation"
+    },
+  };
 
-          var settings = {
-            "contributed" : {
-              "icon": new LeafIcon({iconUrl: '/img/location_contributed.svg'}),
-              "count" : 0,
-              "prefix" : "Conference talk"
-            },
-            "seminar" : {
-              "icon": new LeafIcon({iconUrl: '/img/location_seminar.svg'}),
-              "count" : 0,
-              "prefix" : "Seminar talk"
-            },
-            "poster" : {
-              "icon": new LeafIcon({iconUrl: '/img/location_poster.svg'}),
-              "count" : 0,
-              "prefix" : "Poster presentation"
-            },
-          };
+  // produce the markers on the map.
+  {% for node in site.data.talks %}
+    var t = '{{node.type}}';
+    tooltip = settings[t]['prefix'] +  " @ {{node.event}} ({{ node.venue }})";
+    settings['{{node.type}}']['count'] += 1;
 
-          {% for node in site.data.talks %}
-            var t = '{{node.type}}';
-            tooltip = settings[t]['prefix'] +  " @ {{node.event}} ({{ node.venue }})";
-            settings['{{node.type}}']['count'] += 1;
-
-            var marker = L.marker([{{node.x}}, {{node.y}}], {icon: settings[t]["icon"]}).addTo(mymap);
-            marker.bindPopup(tooltip);
-            marker.on('mouseover', function (e) { this.openPopup(); });
-            marker.on('mouseout', function (e) { this.closePopup(); });
-          {% endfor %}
-        </script>
+    var marker = L.marker([{{node.x}}, {{node.y}}], {icon: settings[t]["icon"]}).addTo(mymap);
+    marker.bindPopup(tooltip);
+    marker.on('mouseover', function (e) { this.openPopup(); });
+    marker.on('mouseout', function (e) { this.closePopup(); });
+  {% endfor %}
 
 
-      <!-- add a legend. -->
-      <script type="text/javascript">
-        var legend = L.control({position: 'bottomright'});
-        legend.onAdd = function (map) {
-          var div = L.DomUtil.create('div', 'info_legend');
-          labels = [];
-          for (var key in settings) {
-                  div.innerHTML += labels.push('<div><img src="/img/location_'+key+'.svg">' + settings[key]['prefix']+'s: '+settings[key]['count'] +'</div>');
-              }
-              div.innerHTML = labels.join(' ');
-          return div;
-        };
-        legend.addTo(mymap);
-      </script>
+  // add a legend.
+  var legend = L.control({position: 'bottomright'});
+  legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info_legend');
+    labels = [];
+    for (var key in settings) {
+            div.innerHTML += labels.push('<div><img src="/img/location_'+key+'.svg">' + settings[key]['prefix']+'s: '+settings[key]['count'] +'</div>');
+        }
+        div.innerHTML = labels.join(' ');
+    return div;
+  };
+  legend.addTo(mymap);
+</script>
 
-      <!-- Produce the list of talks.  -->
-      <table class='talk_table'>
-        <tr>
-          <th></th>
-          <th>Title</th>
-          <th>Event / Location</th>
-          <th>Date</th>
-        </tr>
 
-        {% for node in site.data.talks %}
-          <tr>
-            <td><img src="/img/location_{{node.type}}.svg" alt=""></td>
-            <td><a target='blank' class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.file }}">{{ node.title }}</a></td>
-            <td>{% if node.event %} {{node.event}} @ {% endif %}{{ node.venue }}</td>
-            <td>{{ node.date }}</td>
-          </tr>
-        {% endfor %}
-
-      </table>
-
-    </div>
-</body>
-</html>
+<!-- Produce the list of talks.  -->
+<table class='talk_table'>
+  <tr>
+    <th></th>
+    <th>Title</th>
+    <th>Event / Location</th>
+    <th>Date</th>
+  </tr>
+  {% for node in site.data.talks %}
+    <tr>
+      <td><img src="/img/location_{{node.type}}.svg" alt=""></td>
+      <td><a target='blank' class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.file }}">{{ node.title }}</a></td>
+      <td>{% if node.event %} {{node.event}} @ {% endif %}{{ node.venue }}</td>
+      <td>{{ node.date }}</td>
+    </tr>
+  {% endfor %}
+</table>

@@ -22,7 +22,7 @@
   type: seminar
   x: 42.725191
   y: -84.474591
-  file:
+  file: /stuff/talks/2018_10_MSU.pdf
 
 - title: Thermodynamics of the spin-polarized unitary Fermi gas
   venue: North Carolina State University, USA
@@ -32,7 +32,7 @@
   type: seminar
   x: 35.785655
   y: -78.681880
-  file:
+  file: /stuff/talks/2018_09_NCSU.pdf
 
 - title: Imbalanced Fermi gases & the complex Langevin approach
   venue: Physikzentrum Bad Honnef, Germany

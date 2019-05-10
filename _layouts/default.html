@@ -4,15 +4,19 @@
   <body>
     {% include sidebar.html %}
 
-    <div class="content container">
-      {% if page.title == 'Home' %}
+    {% if page.title == 'Home' %}
+    <div class="content container wide">
         <div class="page mainpage">
           {{ content}}
         </div>
-      {% else %}
-        {{ content}}
-      {% endif %}
-    </div>
+      </div>
+    {% else %}
+      <div id='page_container' class="content wide container">
+        <div class="page wide">
+          {{ content}}
+        </div>
+      </div>
+    {% endif %}
 
   </body>
 </html>
