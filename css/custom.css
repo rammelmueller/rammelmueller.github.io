@@ -41,14 +41,16 @@
   font-size: 0.8rem;
 }
 
-
 .posts .title{
   font-weight: bold;
 }
 .posts .timetag{
-  font-color: #c7c7c7;
+  color: #878787;
   font-weight: bold;
- }
+}
+.post{
+    margin-top: 0.5rem 0 0 0;
+}
 
 
 /* MAP & TALKS*/
@@ -147,18 +149,15 @@
  *
  * */
 
-.project_line{
-  height: 612px;
-  padding: 1% 0 1% 0;
+.projects{
+  min-width: 46rem;
+  flex-wrap: wrap;
 }
 .project{
   padding: 1rem;
   border-radius: 0.3rem;
   margin-right: 2%;
   float: left;
-  height: 100%;
-  align: justify;
-  position: relative;
 }
 .project img{
   display: inline-block;
@@ -183,14 +182,12 @@
   /* color: rgba(255,255,255,1); */
   /* background-color: #2e4057; */
 }
+
 .project p{
 }
 
 .project .footer{
-  height: 20px;
-  position: absolute;
   width: 100%;
-  bottom: 1rem;
-  left: 1rem;
   font-size: 0.7rem;
+  margin: 1rem 0 0.5rem 0;
 }
