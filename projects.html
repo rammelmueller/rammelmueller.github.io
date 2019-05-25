@@ -2,9 +2,9 @@
 layout: page
 title: Projects
 ---
-<!-- <h1>Research interests & projects</h1> -->
-<div class="project_line">
-  <div class="project inverted"  style="width: 25%;">
+<div class="projects">
+
+  <div class="project inverted">
     <p class='title'>My interests</p>
     <p>
       are primarily focused on the exploration of ultracold quantum gases with numerical techniques.
@@ -17,7 +17,7 @@ title: Projects
       <a target='blank' href="https://arxiv.org/a/rammelmuller_l_1.html" >arXiv</a>.
     </p>
   </div>
-  <div class="project featured" style="width: 70%;">
+  <div class="project featured">
     <p class='title'>Unitary fermions & spin imbalance</p>
     <img src="/projects/eos_balanced.png" align='right' width="300px">
 
@@ -33,10 +33,8 @@ title: Projects
       <a target='blank' href="https://doi.org/10.1103/PhysRevLett.121.173001">[Phys. Rev. Lett. 121, 173001 (2018)]</a>
     </div>
   </div>
-<!-- </div> -->
 
-<!-- <div class="project_line"> -->
-  <div class="project regular"  style="width: 57.5%;">
+  <div class="project regular">
     <p class='title'>Fermi mixtures: mass imbalance</p>
     <img src="1D_CLvsiHMC_mixtures.svg" align="left" width="350px">
     Many recent quantum gas experiments involve mixtures of two atomic species. For two fermionic species an unequal mass could lead
@@ -51,7 +49,7 @@ title: Projects
       <a target='blank' href="https://doi.org/10.1088/1742-6596/1041/1/012006">[J. Phys.: Conf. Ser. 1041 012006 (2018)]</a>
     </div>
   </div>
-  <div class="project inverted" style="width: 37.5%;">
+  <div class="project inverted">
     <p class='title'>Complex Langevin (CL)</p>
     <p>
       Whenever we want to study fermionic many-body systems with Monte Carlo methods we face a major road-block: the sign-problem. It causes the algorithms to scale exponentially with increasing system size and so we quickly run out of steam even on the largest available HPC clusters.
@@ -59,27 +57,13 @@ title: Projects
       Recent progress in the area of high-energy physics inspired us to adapt the so-called complex Langevin method to ultracold quantum systems as a way to circumvent this nasty problem. The method itself is known since the mid 80s and has had mixed success due to some mathematical shortcomings for certain theories. However, it turns out that it is a valuable tool in the study of ultracold Fermi gases, as we have shown for a variety of imbalanced systems.
     </p>
   </div>
-<!-- </div> -->
 
 
-<!-- <div class="project_line"> -->
-  <div class="project regular"  style="width: 100%;">
+  <div class="project regular">
     <p class='title'>From few to many with Hybrid Monte Carlo (HMC)</p>
     It turns out, that the answer to the question "How many is many?" poses a formidable challenge and is highly dependent on the spatial dimension. Nevertheless, an answer is needed to know when we can reliably use effective many-body descriptions to infer macroscopic propierties of the system under study. While there are certain exact solutions available in one dimension, these work best in the thermodynamic limit and exact numbers for finite systems are often challenging to come by. In larger spatial dimensions, exact solutions are entirely unkown and thus numerical studies are our only way to address these questions.
     <br>
     Within a series of projects we have characterized this crossover for low-dimensional two-component Fermi gases interacting via a contact interaction. The numerical calculations have been performed with the Hybrid Monte Carlo (HMC) approach which relies on an efficient global updating scheme (in fact, this algorithm is the workhorse in computational high-energy physics). Our analysis includes a large variety of quantities for the one-dimensional case ranging from energies and Tan's contact parameter to one- and two-body density matrices. For the two-dimensional case we highlighty the efficiency of our method and compute energies and momentum distributions across the crossover from the weakly interacting BCS regime to the strongly coupled BEC limit.
-
-
-    <!-- Although there exist exact solutions to the 1D problem via the Bethe ansatz for the thermodynamic limit as well as finite systems, it is often hard to extract precise
-
-    Knowing when a physical system has reached sufficient size for its macroscopic properties to be
-well described by many-body theory is difficult. We investigated the crossover from few- to
-many-body physics by studying quasi–one-dimensional systems of ultracold atoms consisting of a
-single impurity interacting with an increasing number of identical fermions. We measured the
-interaction energy of such a system as a function of the number of majority atoms for different
-strengths of the interparticle interaction. As we increased the number of majority atoms one by
-one, we observed fast convergence of the normalized interaction energy toward a many-body
-limit calculated for a single impurity immersed in a Fermi sea of majority particles. -->
 
     <div class="footer">
       L. Rammelmüller, W.J. Porter, A. C. Loheac, and J. E. Drut
