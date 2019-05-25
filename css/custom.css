@@ -16,6 +16,10 @@
   margin-right: 0.1rem;
 }
 
+.sidebar-social img:hover{
+	opacity: .6
+}
+
 .sidebar-social {
   display: inline !important;
 }
@@ -150,8 +154,8 @@
  * */
 
 .projects{
-  min-width: 46rem;
   flex-wrap: wrap;
+  min-width: 46rem;
 }
 .project{
   padding: 1rem;
