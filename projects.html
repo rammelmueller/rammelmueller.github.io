@@ -4,7 +4,7 @@ title: Projects
 ---
 <div class="projects">
 
-  <div class="project inverted">
+  <div id="proj_interests" class="project inverted">
     <p class='title'>My interests</p>
     <p>
       are primarily focused on the exploration of ultracold quantum gases with numerical techniques.
@@ -17,9 +17,9 @@ title: Projects
       <a target='blank' href="https://arxiv.org/a/rammelmuller_l_1.html" >arXiv</a>.
     </p>
   </div>
-  <div class="project featured">
+  <div id="proj_ufg" class="project featured">
     <p class='title'>Unitary fermions & spin imbalance</p>
-    <img src="/projects/eos_balanced.png" align='right' width="300px">
+    <img src="/projects/eos_balanced.png" align="right">
 
     One of the most remarkable features in cold atom experiments is the ability to tune the interaction strength between particles. For Fermi systems, this allows
     us to study the crossover from weakly interacting fermions to tightly bound fermionic molecules. Right in the "middle" of this so-called BCS-BEC crossover,
@@ -34,9 +34,9 @@ title: Projects
     </div>
   </div>
 
-  <div class="project regular">
+  <div id="proj_mib" class="project regular">
     <p class='title'>Fermi mixtures: mass imbalance</p>
-    <img src="1D_CLvsiHMC_mixtures.svg" align="left" width="350px">
+    <img src="1D_CLvsiHMC_mixtures.svg" align="left">
     Many recent quantum gas experiments involve mixtures of two atomic species. For two fermionic species an unequal mass could lead
     to interesting consequences such as inhomogeneous pairing at low temperature. Theoretically, however, these systems are challenging to treat due to the reduced symmetry.
     Within this project, we investigated the applicability of two computational methods (iHMC & CL) to study mass-imbalanced systems by performing a case study for 1D fermions.
@@ -49,7 +49,7 @@ title: Projects
       <a target='blank' href="https://doi.org/10.1088/1742-6596/1041/1/012006">[J. Phys.: Conf. Ser. 1041 012006 (2018)]</a>
     </div>
   </div>
-  <div class="project inverted">
+  <div id="proj_cl" class="project inverted">
     <p class='title'>Complex Langevin (CL)</p>
     <p>
       Whenever we want to study fermionic many-body systems with Monte Carlo methods we face a major road-block: the sign-problem. It causes the algorithms to scale exponentially with increasing system size and so we quickly run out of steam even on the largest available HPC clusters.
@@ -59,7 +59,7 @@ title: Projects
   </div>
 
 
-  <div class="project regular">
+  <div id="proj_hmc" class="project regular">
     <p class='title'>From few to many with Hybrid Monte Carlo (HMC)</p>
     It turns out, that the answer to the question "How many is many?" poses a formidable challenge and is highly dependent on the spatial dimension. Nevertheless, an answer is needed to know when we can reliably use effective many-body descriptions to infer macroscopic propierties of the system under study. While there are certain exact solutions available in one dimension, these work best in the thermodynamic limit and exact numbers for finite systems are often challenging to come by. In larger spatial dimensions, exact solutions are entirely unkown and thus numerical studies are our only way to address these questions.
     <br>

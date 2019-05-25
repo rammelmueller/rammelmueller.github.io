@@ -1,0 +1,85 @@
+
+/*
+ * PROJCETS
+ *
+ * */
+
+ .projects a{
+   font-family: "Roboto Mono";
+ }
+ .projects .regular{
+   /* background-color: #C6C7C4; */
+ }
+ .projects .inverted{
+   background-color: #333533;
+   color: #fefefaff;
+ }
+ .projects .featured{
+   /* color: rgba(255,255,255,1); */
+   /* background-color: #2e4057; */
+ }
+
+ .project .title{
+   font-family: "Roboto Mono";
+   font-size: 1.7rem;
+   font-weight: bold;
+ }
+ .project p{
+ }
+ .project .footer{
+   width: 100%;
+   font-size: 0.7rem;
+   margin: 1rem 0 0.5rem 0;
+ }
+
+
+.project{
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 100rem) {
+  .project{
+    margin-right: 2%;
+    float: left;
+  }
+  .project img{
+    display: inline-block;
+    margin: 0 1rem 0 1rem;
+  }
+  #proj_interests{
+    width: 27%;
+  }
+
+  #proj_ufg{
+    width: 68%;
+  }
+  #proj_ufg img{
+    width: 35%;
+  }
+
+  #proj_mib{
+    width: 57.55%;
+  }
+  #proj_mib img{
+    width: 50%;
+  }
+
+  #proj_cl{
+    width: 37.5%;
+  }
+
+  #proj_hmc{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 100em) {
+  .project{
+    width: 100%;
+  }
+  .project img{
+    width: 50%;
+  }
+}
