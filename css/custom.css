@@ -1,6 +1,9 @@
 .sidebar-disclaimer {
   margin-top: 2rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+}
+.sidebar-disclaimer p{
+	margin: 0.4rem 0 0 0;
 }
 .sidebar-disclaimer a{
   color: rgba(255, 255, 255, 0.5);
