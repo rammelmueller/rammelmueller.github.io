@@ -1,3 +1,13 @@
+# - title: "Approaching imbalanced Fermi gases via complex Langevin"
+#   event: High-energy physics at ultracold temperatures
+#   date: June 10 - 14, 2019
+#   venue: ECT* Trento, Italy
+#   type: talk
+#   x: 46.043115
+#   y: 11.140847
+#   file: /stuff/talks/2019_06_trento.pdf
+
+
 - title: "Approaching Fermi mixtures with complex Langevin: EOS and pairing behavior"
   event: Compound (atomic) quantum systems
   date: May 19 - 24, 2019
@@ -14,7 +24,7 @@
   type: seminar
   x: 43.465569
   y: -80.527585
-  file: https://rammelmueller.github.io/slides
+  file: /stuff/talks/2019_03_PI.pdf
 
 - title: Stochastic quantization and spin-polarized Fermi gases
   venue: Faculty for Nanophysics, Ludwig-Maximillians Universität Munich, Germany
@@ -22,7 +32,7 @@
   type: seminar
   x: 48.148492
   y:  11.573193
-  file:
+  file: /stuff/talks/2019_03_LMU.pdf
 
 - title: Thermodynamics of the spin-polarized unitary Fermi gas
   venue: Michigan State University, USA
