@@ -1,12 +1,11 @@
-# - title: "Approaching imbalanced Fermi gases via complex Langevin"
-#   event: High-energy physics at ultracold temperatures
-#   date: June 10 - 14, 2019
-#   venue: ECT* Trento, Italy
-#   type: talk
-#   x: 46.043115
-#   y: 11.140847
-#   file: /stuff/talks/2019_06_trento.pdf
-
+- title: "Approaching imbalanced Fermi gases via complex Langevin"
+  event: High-energy physics at ultracold temperatures
+  date: June 10 - 14, 2019
+  venue: ECT* Trento, Italy
+  type: talk
+  x: 46.043115
+  y: 11.140847
+  file: /stuff/talks/2019_06_trento.pdf
 
 - title: "Approaching Fermi mixtures with complex Langevin: EOS and pairing behavior"
   event: Compound (atomic) quantum systems
@@ -16,7 +15,6 @@
   x: 52.169386
   y: 4.457807
   file: /stuff/talks/2019_05_leiden.pdf
-
 
 - title: Stochastic quantization and spin-polarized Fermi gases
   date: March 26, 2019
