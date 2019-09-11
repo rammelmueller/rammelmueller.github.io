@@ -1,3 +1,21 @@
+#- title: "Unitary fermions with finite spin-asymmetry"
+#  event: Quantum Systems in Extreme Conditions
+#  date: September 10 - 14, 2019
+#  venue: Heidelberg University, Germany
+#  type: contributed
+#  x: 49.417102
+#  y: 8.672791
+#  file: /stuff/talks/2019_09_qsec19.pdf
+  
+- title: "Spin-polarized fermions at unitarity: a complex langevin study"
+  event: 20th International Conference on Recent Progress in Many Body Theories
+  date: September 9 - 13, 2019
+  venue: Tolouse, France
+  type: contributed
+  x: 43.599342
+  y: 1.436581
+  file: /stuff/talks/2019_09_rpmbt20.pdf
+  
 - title: "Approaching imbalanced Fermi gases via complex Langevin"
   event: High-energy physics at ultracold temperatures
   date: June 10 - 14, 2019
