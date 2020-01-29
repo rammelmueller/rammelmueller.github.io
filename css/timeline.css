@@ -124,15 +124,15 @@
   content :'▶';
 
   color: white;
-  -webkit-text-stroke: 0.1rem black;
-  font-size: 0.85rem;
+  -webkit-text-stroke: 0.09rem #515151;
+  font-size: 0.70rem;
 
   /* width: 0px; */
   /* height: 0px; */
 
   position: absolute;
   display: block;
-  margin: 0.35rem 10px 0 -35px;
+  margin: 0.45rem 10px 0 -34px;
 }
 
 
