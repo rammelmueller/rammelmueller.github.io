@@ -1,0 +1,149 @@
+.timeline{
+  width: 800px;
+  position: relative;
+}
+
+.timeline .block{
+    margin: 50px 0 0 0;
+}
+
+.timeline .block_header{
+  font-family: 'Roboto Slab';
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  /* color: black; */
+  /* position: relative; */
+}
+
+/* general entry structure. */
+.timeline .entry{
+  margin: 0 0 0 220px;
+  border-left: 2px solid;
+  padding: 5px 0 5px 30px;
+  position: relative;
+}
+
+.timeline .timespan{
+  text-align: right;
+  font-weight: 400;
+  font-family: "Source Sans Pro";
+  float: left;
+  width: 170px;
+  font-size: 12pt !important;
+  position: absolute;
+  left: -200px;
+  line-height: 24pt;
+  vertical-align: middle;
+}
+
+
+.timeline .work::before{
+  content: '';
+  position: absolute;
+  display: block;
+  left: -8px;
+  top: 0.65rem;
+  vertical-align: top;
+  border: 2px solid #515151;
+  border-radius: 50%;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+}
+
+.work .subtitle{
+  font-weight: 200;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+.work .text{
+  color: gray;
+  font-size: 12pt;
+  line-height: 14pt;
+  width: 550px;
+  padding-bottom: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.work .head{
+  font-weight: bold;
+}
+
+
+.timeline .meta{
+  padding: 0 0 0 30px;
+  position: relative;
+}
+
+.timeline .meta::before{
+  content: '';
+  position: absolute;
+  display: block;
+  left: -6px;
+  top: 0.6rem;
+  vertical-align: top;
+  border: 2px solid #515151;
+  border-radius: 0%;
+  background-color: white;
+  width: 6px;
+  height: 2px;
+  padding-top: 4px;
+}
+
+.meta .head{
+  font-weight: 200;
+  font-family: "Roboto Slab";
+  font-size: 14pt;
+  padding: 2px 0 10px 0;
+}
+
+.timeline .short{
+  padding-bottom: 5px !important;
+}
+
+/* .teaching::before{
+  content :'';
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid gray;
+
+  position: absolute;
+  display: block;
+  margin: 0.5rem 10px 0 -35px;
+} */
+
+.triangle {
+
+}
+
+.teaching::before{
+  content :'▶';
+
+  color: white;
+  -webkit-text-stroke: 0.1rem black;
+  font-size: 0.85rem;
+
+  /* width: 0px; */
+  /* height: 0px; */
+
+  position: absolute;
+  display: block;
+  margin: 0.35rem 10px 0 -35px;
+}
+
+
+.teaching .head{
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: gray;
+}
+.teaching .courses{
+  font-size: 0.6rem;
+  background-color: #dddddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
