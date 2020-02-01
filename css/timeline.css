@@ -1,6 +1,8 @@
-.timeline{
-  width: 800px;
-  position: relative;
+@media (max-width: 48em) {
+  .timeline{
+    position: relative;
+    margin-top: -50px;
+  }
 }
 
 .timeline .block{
@@ -18,10 +20,11 @@
 
 /* general entry structure. */
 .timeline .entry{
-  margin: 0 0 0 220px;
+  margin: 0 0 0 10rem;
   border-left: 2px solid;
-  padding: 5px 0 5px 30px;
+  padding: 5px 0 5px 1.5rem;
   position: relative;
+  max-width: 30rem;
 }
 
 .timeline .timespan{
@@ -29,10 +32,10 @@
   font-weight: 400;
   font-family: "Source Sans Pro";
   float: left;
-  width: 170px;
+  width: 7.5rem;
   font-size: 12pt !important;
   position: absolute;
-  left: -200px;
+  left: -9rem;
   line-height: 24pt;
   vertical-align: middle;
 }
@@ -61,7 +64,6 @@
   color: gray;
   font-size: 12pt;
   line-height: 14pt;
-  width: 550px;
   padding-bottom: 10px;
   text-align: justify;
   text-justify: inter-word;
@@ -132,7 +134,8 @@
 
   position: absolute;
   display: block;
-  margin: 0.45rem 10px 0 -34px;
+  margin: 0rem 10px 0 -1.8rem;
+  /* margin: 0.45rem 10px 0 -1.8rem; */
 }
 
 
@@ -143,7 +146,9 @@
 }
 .teaching .courses{
   font-size: 0.6rem;
-  background-color: #dddddd;
   border-radius: 5px;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
+}
+.teaching .ctag{
+  font-weight: bold;
 }
