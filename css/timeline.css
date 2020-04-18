@@ -108,17 +108,40 @@
 .triangle {
 }
 
-.teaching::before{
-  content :'▶';
 
-  color: white;
-  -webkit-text-stroke: 0.09rem #515151;
-  font-size: 0.70rem;
-
+/* .teaching::before{
+  content: '';
   position: absolute;
   display: block;
-  margin: 0rem 0 0 -1.8rem;
+  left: -0.4rem;
+  top: 0.65rem;
+  vertical-align: top;
+  border: 2px solid #515151;
+  border-radius: 50%;
+  background-color: white;
+  width: 0.5rem;
+  height: 0.5rem;
+} */
+
+
+.teaching::before{
+  content: '';
+  position: absolute;
+  display: block;
+  left: -0.33rem;
+  top: 0.5rem;
+  vertical-align: top;
+  border: 2px solid #515151;
+  border-radius: 0%;
+  background-color: white;
+  width: 0.35rem;
+  height: 0.12rem;
+  padding-top: 0.24rem;
+
 }
+
+
+
 
 .teaching .head{
   font-weight: bold;
@@ -132,4 +155,27 @@
 }
 .teaching .ctag{
   font-weight: bold;
+}
+
+
+.Chevron{
+    position:relative;
+    display:block;
+    height:50px;/*height should be double border*/
+}
+.Chevron:before,
+.Chevron:after{
+    position:absolute;
+    display:block;
+    content:"";
+    border:25px solid transparent;/*adjust size*/
+}
+/*Change four 'top' values below to rotate (top/right/bottom/left)*/
+.Chevron:before{
+    left:0;
+    border-left-color:#b00;/*Chevron Color*/
+}
+.Chevron:after{
+    left:-20px;/*adjust thickness*/
+    border-left-color:#fff;/*Match background colour*/
 }
