@@ -131,7 +131,7 @@
   left: -0.33rem;
   top: 0.5rem;
   vertical-align: top;
-  border: 2px solid #515151;
+  border: 5px solid #515151;
   border-radius: 0%;
   background-color: white;
   width: 0.35rem;
@@ -139,8 +139,6 @@
   padding-top: 0.24rem;
 
 }
-
-
 
 
 .teaching .head{
