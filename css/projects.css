@@ -66,6 +66,12 @@
   #proj_mib img{
     width: 50%;
   }
+  #proj_shot{
+    width: 68%;
+  }
+  #proj_shot img{
+    width: 95%;
+  }
 
   #proj_cl{
     width: 37.5%;

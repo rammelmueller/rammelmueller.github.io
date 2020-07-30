@@ -20,7 +20,7 @@
 
 /* general entry structure. */
 .timeline .entry{
-  margin: 0 0 0 9rem;
+  margin: 1rem 0 0 9rem;
   border-left: 2px solid;
   padding: 0.2rem 0 0.2rem 1.5rem;
   position: relative;
@@ -30,7 +30,7 @@
 .timeline .timespan{
   text-align: right;
   font-weight: 400;
-  font-family: "Source Sans Pro";
+    font-family: 'Roboto Slab';
   float: left;
   width: 6.5rem;
   font-size: 0.7rem !important;
@@ -97,7 +97,7 @@
 .meta .head{
   font-weight: 200;
   font-family: "Roboto Slab";
-  font-size: 1rem;
+  font-size: 0.85rem;
   /* padding: 0 0 10px 0; */
 }
 

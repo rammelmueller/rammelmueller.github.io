@@ -54,18 +54,25 @@ layout: default
       "count" : 0,
       "prefix" : "Poster presentation"
     },
+    "virtual" : {
+      "icon": new LeafIcon({iconUrl: '/img/location_virtual.svg'}),
+      "count" : 0,
+      "prefix" : "Virtual presentation"
+    },
   };
 
   // produce the markers on the map.
   {% for node in site.data.talks %}
     var t = '{{node.type}}';
-    tooltip = settings[t]['prefix'] +  " @ {{node.event}} ({{ node.venue }})";
     settings['{{node.type}}']['count'] += 1;
+    if (t != "virtual") {
+      tooltip = settings[t]['prefix'] +  " @ {{node.event}} ({{ node.venue }})";
 
-    var marker = L.marker([{{node.x}}, {{node.y}}], {icon: settings[t]["icon"]}).addTo(mymap);
-    marker.bindPopup(tooltip);
-    marker.on('mouseover', function (e) { this.openPopup(); });
-    marker.on('mouseout', function (e) { this.closePopup(); });
+      var marker = L.marker([{{node.x}}, {{node.y}}], {icon: settings[t]["icon"]}).addTo(mymap);
+      marker.bindPopup(tooltip);
+      marker.on('mouseover', function (e) { this.openPopup(); });
+      marker.on('mouseout', function (e) { this.closePopup(); });
+    }
   {% endfor %}
 
 

@@ -1,10 +1,16 @@
+- title: "Approaching Fermi-Fermi mixtures with complex Langevin: EoS and pairing"
+  date: July 6 - 8, 2020
+  venue: virtual space hosted by Munich Center for Qauntum Science and Technology (MCQST), Munich, Germany
+  type: virtual
+  file: /stuff/talks/2020_07_MCQST.pdf
+
 - title: Exploring imbalanced Fermi gases with stochastic quantization
   date: January 28, 2020
   venue: Institute for theoretical physics, University of Heidelberg, Germany (Cold Quantum Coffee)
   type: seminar
   x: 49.414955
   y: 8.696912
-  file: 
+  file:
 
 - title: "Unitary fermions with finite spin-asymmetry"
   event: Quantum Systems in Extreme Conditions
@@ -14,7 +20,7 @@
   x: 49.417102
   y: 8.672791
   file: /stuff/talks/2019_09_qsec19.pdf
-  
+
 - title: "Spin-polarized fermions at unitarity: a complex langevin study"
   event: 20th International Conference on Recent Progress in Many Body Theories
   date: September 9 - 13, 2019
@@ -23,7 +29,7 @@
   x: 43.599342
   y: 1.436581
   file: /stuff/talks/2019_09_rpmbt20.pdf
-  
+
 - title: "Approaching imbalanced Fermi gases via complex Langevin"
   event: High-energy physics at ultracold temperatures
   date: June 10 - 14, 2019

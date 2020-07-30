@@ -46,9 +46,11 @@
  * POSTS.
  *
  */
+
 .posts{
   margin-top: 3rem;
   font-size: 0.8rem;
+  width: 50%;
 }
 
 .posts .title{
