@@ -41,7 +41,12 @@
   margin: 0 2rem 0 0.5rem;
 }
 
+
+
 @media (min-width: 100rem) {
+  #ibuffer{
+    margin-top: 11rem;
+  }
   .project{
     margin-right: 2%;
     float: left;
