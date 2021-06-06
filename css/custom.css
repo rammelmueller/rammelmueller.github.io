@@ -75,8 +75,16 @@
   margin-bottom: 2rem;
 }
 
+.talk_header{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
 .talk_table{
   font-size: 0.7rem;
+  table-layout: fixed;
 }
 .talk_table img{
   min-width: 2rem;

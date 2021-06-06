@@ -64,10 +64,21 @@ layout: default
   };
 
   // produce the markers on the map.
+  all_talks = {
+    2021:[], 2020:[], 2019:[], 2018:[], 2017:[]
+  };
+  years = Object.keys(all_talks);
+  years.sort(function(a, b){return b-a});
+  console.log(years);
   {% for node in site.data.talks %}
+
     var t = '{{node.type}}';
+    var v = '{{node.venue}}';
     settings['{{node.type}}']['count'] += 1;
-    if (t != "virtual") {
+    if (v == "virtual") {
+      settings["virtual"]["count"] += 1;
+    }
+    if (v != "virtual") {
       tooltip = settings[t]['prefix'] +  " @ {{node.event}} ({{ node.venue }})";
 
       var marker = L.marker([{{node.x}}, {{node.y}}], {icon: settings[t]["icon"]}).addTo(mymap);
@@ -75,6 +86,17 @@ layout: default
       marker.on('mouseover', function (e) { this.openPopup(); });
       marker.on('mouseout', function (e) { this.closePopup(); });
     }
+    var y = '{{node.year}}';
+    all_talks[y].push(
+      {
+        "icon" : '{% if node.venue == "virtual" %}/img/location_virtual_{{node.type}}.svg{% else %}/img/location_{{node.type}}.svg{%endif%}',
+        "title" : "{{ node.title }}",
+        "file" : "{{ node.file }}",
+        "description" : "{% if node.event %} {{node.event}} @ {% endif %}{{ node.venue }}",
+        "date" : "{{node.date}}",
+      }
+    );
+
   {% endfor %}
 
 
@@ -92,21 +114,73 @@ layout: default
   legend.addTo(mymap);
 </script>
 
+<script type="text/javascript">
 
-<!-- Produce the list of talks.  -->
-<table class='talk_table'>
-  <tr>
-    <th></th>
-    <th>Title</th>
-    <th>Event / Location</th>
-    <th>Date</th>
-  </tr>
-  {% for node in site.data.talks %}
+  function make_row(icon, title, file, description, date){
+    var row = document.createElement('tr');
+
+    var col = document.createElement('td');
+    if (icon) {
+      var img = document.createElement('img');
+      img.setAttribute('src', icon);
+      col.appendChild(img);
+    }
+    col.setAttribute("style", "width:5%");
+    row.appendChild(col);
+
+    var col = document.createElement('td');
+    col.innerHTML = '<a target="blank" class="sidebar-nav-item" href="'+file+'">'+title+'</a>';
+    col.setAttribute("style", "width:40%");
+    row.appendChild(col);
+
+    var col = document.createElement('td');
+    col.innerHTML = description;
+    col.setAttribute("style", "width:40%");
+    row.appendChild(col);
+
+    var col = document.createElement('td');
+    col.innerHTML = date;
+    col.setAttribute("style", "width:15%");
+    row.appendChild(col);
+
+    return row;
+  };
+
+  var cont = document.getElementById("page_container");
+
+  for (year of years) {
+    var header = document.createElement('div');
+    header.setAttribute("class", "talk_header");
+    header.innerHTML=year;
+    cont.appendChild(header);
+
+    var table = document.createElement("table");
+    table.setAttribute("class", "talk_table");
+    //
+    // var thead = document.createElement('tr');
+    // thead.innerHTML = "<th></th> <th>Title</th> <th>Event / Location</th><th>Date</th>"
+    // table.appendChild(thead);
+
+    for (talk of all_talks[year]) {
+      var row = make_row(talk["icon"], talk["title"], talk["file"], talk["description"], talk["date"]);
+      table.appendChild(row);
+    }
+
+    cont.appendChild(table);
+  }
+
+</script>
+
+
+  <!-- {% for node in site.data.talks %}
     <tr>
-      <td><img src="/img/location_{{node.type}}.svg" alt=""></td>
+      {% if node.venue == "virtual" %}
+        <td><img src="/img/location_virtual_{{node.type}}.svg" alt=""></td>
+      {% else %}
+        <td><img src="/img/location_{{node.type}}.svg" alt=""></td>
+      {%endif%}
       <td><a target='blank' class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.file }}">{{ node.title }}</a></td>
       <td>{% if node.event %} {{node.event}} @ {% endif %}{{ node.venue }}</td>
       <td>{{ node.date }}</td>
     </tr>
-  {% endfor %}
-</table>
+  {% endfor %} -->
