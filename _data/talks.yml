@@ -6,13 +6,13 @@
 #   type: seminar
 #   file: /stuff/talks/_SINP.pdf
 #
-# - title: "Pairing in 1D spin- and mass-imbalanced Fermi gases"
-#   date: June 14 - 16, 2021
-#   year: 2021
-#   event: Superfluctuations 2021
-#   venue: virtual
-#   type: contributed
-#   file: /stuff/talks/2021_06_superfluctuations21.pdf
+- title: "Pairing in 1D spin- and mass-imbalanced Fermi gases"
+  date: June 14 - 16, 2021
+  year: 2021
+  event: Superfluctuations 2021
+  venue: virtual
+  type: contributed
+  file: /stuff/talks/2021_06_Superfluctuations21.pdf
 
 - title: "Improving the grasp of harmonically trapped fermions in low dimensions"
   date: June 7 - 10, 2021
